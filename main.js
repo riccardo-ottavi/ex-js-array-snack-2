@@ -53,3 +53,18 @@ console.log(longBooks)
 
 const longBooksTitles = longBooks.map( b => b.title);
 console.log(longBooksTitles)
+
+const availableBooks = books.filter( b => b.available === true )
+console.log(availableBooks)
+
+const discountedBooks = availableBooks.map((b) => {
+    b.price = parseInt(b.price) - (parseInt(b.price) * 20 / 100);
+    Math.round(b.price)
+    b.price = b.price.toFixed(2).toString() + "€"
+    return b 
+})
+console.log(discountedBooks)
+
+const fullPricedBook = discountedBooks.find( b => Number.isInteger(parseInt(b.price)) )
+console.log(fullPricedBook)
+
