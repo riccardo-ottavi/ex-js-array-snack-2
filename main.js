@@ -48,5 +48,8 @@ const books = [
 ];
 
 //Snack 1 - Filtra e Modifica
-const longBooks = books.filter ((b) => b.pages > 300)
+const longBooks = books.filter ( b => b.pages > 300)
 console.log(longBooks)
+
+const longBooksTitles = longBooks.map( b => b.title);
+console.log(longBooksTitles)
