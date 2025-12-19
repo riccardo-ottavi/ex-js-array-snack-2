@@ -79,3 +79,15 @@ authors.sort((a, b) => {
 }
 )
 console.log(authors)
+
+const ages = authors.map(author => author.age)
+console.log(ages)
+
+const agesSum = ages.reduce((acc, n) => {
+    return acc + n
+}, 0)
+
+console.log(agesSum)
+
+const averageAge = agesSum / ages.length
+console.log(averageAge)
